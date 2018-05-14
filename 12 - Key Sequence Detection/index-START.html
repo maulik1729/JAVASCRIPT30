@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Key Detection</title>
+  <script type="text/javascript" src="http://www.cornify.com/js/cornify.js"></script>
+</head>
+<body>
+<script>
+  var arr=[];
+  const secretcode="helloo";
+  document.addEventListener("keyup",(e) =>{
+    arr.push(e.key);
+    arr.splice(-arr.l+1,arr.length-secretcode.length);
+    if(arr.join('').includes(secretcode))
+    {
+      console.log("ding");
+    }
+    console.log(arr);
+  })
+</script>
+</body>
+</html>
